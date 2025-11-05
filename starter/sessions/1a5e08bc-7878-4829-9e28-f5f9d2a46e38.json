@@ -1,0 +1,320 @@
+{
+  "session_id": "1a5e08bc-7878-4829-9e28-f5f9d2a46e38",
+  "user_id": "example_user_2",
+  "conversation_history": [
+    {
+      "user_input": "Summarize contract CON-001",
+      "messages": [
+        {
+          "content": "You are an expert document summarizer specializing in financial and healthcare documents.\n\nYour approach:\n- Extract key information and main points\n- Organize summaries logically\n- Highlight important numbers, dates, and parties\n- Keep summaries concise but comprehensive\n\nGuidelines:\n1. First search for and read the relevant documents\n2. Structure summaries with clear sections\n3. Include document IDs in your summary\n4. Focus on actionable information\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "fedd118e-6622-4ce2-aa56-d4881cb9a9ba"
+        },
+        {
+          "content": "Summarize contract CON-001",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "fa38838d-22c6-4432-b4c5-62f03f48c9f1"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 17,
+              "prompt_tokens": 730,
+              "total_tokens": 747,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYavKYiuL4UPciiyOLxuHmVZPuEom",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--75265ed7-dcf6-4506-9437-7ea1d4022f2c-0",
+          "tool_calls": [
+            {
+              "name": "document_reader",
+              "args": {
+                "doc_id": "CON-001"
+              },
+              "id": "call_KMMtm6or4V4ITlQ6cDSheZS7",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 730,
+            "output_tokens": 17,
+            "total_tokens": 747,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Document CON-001:\nAmount: $180,000.00\n\n\n                SERVICE AGREEMENT\n\n                This Service Agreement is entered into on January 1, 2024, between:\n                - Provider: DocDacity Solutions Inc.\n                - Client: Healthcare Partners LLC\n\n                Services:\n                1. Document Processing Platform Access\n                2. 24/7 Technical Support\n                3. Monthly Data Analytics Reports\n                4. Compliance Monitoring\n\n                Duration: 12 months\n                Monthly Fee: $15,000\n                Total Contract Value: $180,000\n\n                Termination: Either party may terminate with 60 days written notice.\n                ",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "document_reader",
+          "id": "5cb8c1ee-5353-444f-9e9f-1f1dfcd2b416",
+          "tool_call_id": "call_KMMtm6or4V4ITlQ6cDSheZS7",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "### Contract Summary: CON-001\n\n**Parties Involved:**\n- **Provider:** DocDacity Solutions Inc.\n- **Client:** Healthcare Partners LLC\n\n**Contract Details:**\n- **Amount:** $180,000.00\n- **Effective Date:** January 1, 2024\n- **Duration:** 12 months\n- **Monthly Fee:** $15,000\n\n**Services Provided:**\n1. Document Processing Platform Access\n2. 24/7 Technical Support\n3. Monthly Data Analytics Reports\n4. Compliance Monitoring\n\n**Termination Clause:**\n- Either party may terminate the agreement with 60 days written notice. \n\nThis contract outlines the terms for the provision of services by DocDacity Solutions Inc. to Healthcare Partners LLC, with a total value of $180,000 over a one-year period.",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 171,
+              "prompt_tokens": 891,
+              "total_tokens": 1062,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYavNnHinrKKG93Zpe8Vjx3p6V7kt",
+            "service_tier": "default",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--5c9b145f-cbf5-4b77-b449-2e290a3d8d86-0",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 891,
+            "output_tokens": 171,
+            "total_tokens": 1062,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      ],
+      "intent": {
+        "intent_type": "summarization",
+        "confidence": 0.95,
+        "reasoning": "The user is requesting a summary of a specific contract, which falls under the category of summarization as it involves extracting key points from a document."
+      },
+      "next_step": "end",
+      "conversation_summary": "### Contract Summary: CON-001\n\n**Parties Involved:**\n- **Provider:** DocDacity Solutions Inc.\n- **Client:** Healthcare Partners LLC\n\n**Contract Details:**\n- **Amount:** $180,000.00\n- **Effective Date:** January 1, 2024\n- **Duration:** 12 months\n- **Monthly Fee:** $15,000\n\n**Services Provided:**\n1. Document Processing Platform Access\n2. 24/7 Technical Support\n3. Monthly Data Analytics Reports\n4. Compliance Monitoring\n\n**Termination Clause:**\n- Either party may terminate the agreement with 60 days written notice. \n\nThis contract outlines the terms for the provision of services by DocDacity Solutions Inc. to Healthcare Partners LLC, with a total value of $180,000 over a one-year period.",
+      "active_documents": [
+        "CON-001"
+      ],
+      "current_response": {
+        "messages": [
+          {
+            "content": "You are an expert document summarizer specializing in financial and healthcare documents.\n\nYour approach:\n- Extract key information and main points\n- Organize summaries logically\n- Highlight important numbers, dates, and parties\n- Keep summaries concise but comprehensive\n\nGuidelines:\n1. First search for and read the relevant documents\n2. Structure summaries with clear sections\n3. Include document IDs in your summary\n4. Focus on actionable information\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "fedd118e-6622-4ce2-aa56-d4881cb9a9ba"
+          },
+          {
+            "content": "Summarize contract CON-001",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "fa38838d-22c6-4432-b4c5-62f03f48c9f1"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 17,
+                "prompt_tokens": 730,
+                "total_tokens": 747,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYavKYiuL4UPciiyOLxuHmVZPuEom",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--75265ed7-dcf6-4506-9437-7ea1d4022f2c-0",
+            "tool_calls": [
+              {
+                "name": "document_reader",
+                "args": {
+                  "doc_id": "CON-001"
+                },
+                "id": "call_KMMtm6or4V4ITlQ6cDSheZS7",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 730,
+              "output_tokens": 17,
+              "total_tokens": 747,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Document CON-001:\nAmount: $180,000.00\n\n\n                SERVICE AGREEMENT\n\n                This Service Agreement is entered into on January 1, 2024, between:\n                - Provider: DocDacity Solutions Inc.\n                - Client: Healthcare Partners LLC\n\n                Services:\n                1. Document Processing Platform Access\n                2. 24/7 Technical Support\n                3. Monthly Data Analytics Reports\n                4. Compliance Monitoring\n\n                Duration: 12 months\n                Monthly Fee: $15,000\n                Total Contract Value: $180,000\n\n                Termination: Either party may terminate with 60 days written notice.\n                ",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "document_reader",
+            "id": "5cb8c1ee-5353-444f-9e9f-1f1dfcd2b416",
+            "tool_call_id": "call_KMMtm6or4V4ITlQ6cDSheZS7",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "### Contract Summary: CON-001\n\n**Parties Involved:**\n- **Provider:** DocDacity Solutions Inc.\n- **Client:** Healthcare Partners LLC\n\n**Contract Details:**\n- **Amount:** $180,000.00\n- **Effective Date:** January 1, 2024\n- **Duration:** 12 months\n- **Monthly Fee:** $15,000\n\n**Services Provided:**\n1. Document Processing Platform Access\n2. 24/7 Technical Support\n3. Monthly Data Analytics Reports\n4. Compliance Monitoring\n\n**Termination Clause:**\n- Either party may terminate the agreement with 60 days written notice. \n\nThis contract outlines the terms for the provision of services by DocDacity Solutions Inc. to Healthcare Partners LLC, with a total value of $180,000 over a one-year period.",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 171,
+                "prompt_tokens": 891,
+                "total_tokens": 1062,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYavNnHinrKKG93Zpe8Vjx3p6V7kt",
+              "service_tier": "default",
+              "finish_reason": "stop",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--5c9b145f-cbf5-4b77-b449-2e290a3d8d86-0",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 891,
+              "output_tokens": 171,
+              "total_tokens": 1062,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          }
+        ],
+        "structured_response": {
+          "original_length": 1023,
+          "summary": "### Contract Summary: CON-001\n\n**Parties Involved:**\n- **Provider:** DocDacity Solutions Inc.\n- **Client:** Healthcare Partners LLC\n\n**Contract Details:**\n- **Amount:** $180,000.00\n- **Effective Date:** January 1, 2024\n- **Duration:** 12 months\n- **Monthly Fee:** $15,000\n\n**Services Provided:**\n1. Document Processing Platform Access\n2. 24/7 Technical Support\n3. Monthly Data Analytics Reports\n4. Compliance Monitoring\n\n**Termination Clause:**\n- Either party may terminate the agreement with 60 days written notice. \n\nThis contract outlines the terms for the provision of services by DocDacity Solutions Inc. to Healthcare Partners LLC, with a total value of $180,000 over a one-year period.",
+          "key_points": [
+            "Provider: DocDacity Solutions Inc.",
+            "Client: Healthcare Partners LLC",
+            "Total Contract Value: $180,000",
+            "Monthly Fee: $15,000",
+            "Duration: 12 months",
+            "Services include document processing, technical support, data analytics, and compliance monitoring.",
+            "Termination with 60 days written notice."
+          ],
+          "document_ids": [
+            "CON-001"
+          ],
+          "timestamp": "2024-01-01T00:00:00+00:00"
+        }
+      },
+      "tools_used": [
+        "document_reader"
+      ],
+      "session_id": "1a5e08bc-7878-4829-9e28-f5f9d2a46e38",
+      "user_id": "example_user_2",
+      "actions_taken": [
+        "classify_intent",
+        "summarization_agent"
+      ]
+    }
+  ],
+  "document_context": [
+    "CON-001"
+  ],
+  "created_at": "2025-11-05T19:44:18.595294",
+  "last_updated": "2025-11-05T19:44:42.068067"
+}

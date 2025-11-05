@@ -1,0 +1,48 @@
+[
+  {
+    "timestamp": "2025-11-05T19:44:50.790631",
+    "tool_name": "document_search",
+    "input": {
+      "query": "invoices",
+      "search_type": "amount",
+      "doc_type": "invoice",
+      "min_amount": null,
+      "max_amount": null,
+      "comparison": "over",
+      "amount": 50000.0
+    },
+    "output": "{'results_count': 3}"
+  },
+  {
+    "timestamp": "2025-11-05T19:45:20.322116",
+    "tool_name": "calculator",
+    "input": {
+      "expression": "214500 + 69300"
+    },
+    "output": "{'result': 283800}"
+  },
+  {
+    "timestamp": "2025-11-05T19:45:20.322651",
+    "tool_name": "calculator",
+    "input": {
+      "expression": "214500"
+    },
+    "output": "{'result': 214500}"
+  },
+  {
+    "timestamp": "2025-11-05T19:45:20.323279",
+    "tool_name": "calculator",
+    "input": {
+      "expression": "69300"
+    },
+    "output": "{'result': 69300}"
+  },
+  {
+    "timestamp": "2025-11-05T19:45:36.390481",
+    "tool_name": "document_reader",
+    "input": {
+      "doc_id": "INV-003"
+    },
+    "output": "{'found': True, 'doc_type': 'invoice'}"
+  }
+]

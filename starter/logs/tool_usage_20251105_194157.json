@@ -1,0 +1,10 @@
+[
+  {
+    "timestamp": "2025-11-05T19:42:01.436425",
+    "tool_name": "document_reader",
+    "input": {
+      "doc_id": "CON-001"
+    },
+    "output": "{'found': True, 'doc_type': 'contract'}"
+  }
+]

@@ -1,0 +1,2335 @@
+{
+  "session_id": "a6bb82cd-b927-4f01-9050-e7e2f86052d4",
+  "user_id": "example_user_3",
+  "conversation_history": [
+    {
+      "user_input": "Find all invoices over $50,000",
+      "messages": [
+        {
+          "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "1108416e-74d0-4e29-b84a-f6129f3d4d00"
+        },
+        {
+          "content": "Find all invoices over $50,000",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "0833343d-0bbf-467f-b379-02487f869d53"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 29,
+              "prompt_tokens": 784,
+              "total_tokens": 813,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYavkhKAwT9CYzoojJGg8cHkCMbey",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--a673e9cd-9c16-4ddb-91a6-a91c137fd78e-0",
+          "tool_calls": [
+            {
+              "name": "document_search",
+              "args": {
+                "comparison": "over",
+                "amount": 50000,
+                "search_type": "amount",
+                "doc_type": "invoice"
+              },
+              "id": "call_Xev1Or1zDBdMa2reUdm7uWja",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 784,
+            "output_tokens": 29,
+            "total_tokens": 813,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Error invoking tool 'document_search' with kwargs {'comparison': 'over', 'amount': 50000, 'search_type': 'amount', 'doc_type': 'invoice'} with error:\n query: Field required\n Please fix the error and try again.",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "document_search",
+          "id": "85c8086c-f40a-4ace-99f5-3719f232c8e4",
+          "tool_call_id": "call_Xev1Or1zDBdMa2reUdm7uWja",
+          "artifact": null,
+          "status": "error"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 34,
+              "prompt_tokens": 873,
+              "total_tokens": 907,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYavmPNOilTx2BnSflEinzYuc3ZuO",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--7f808c7f-5876-4790-9473-bb0901e3609e-0",
+          "tool_calls": [
+            {
+              "name": "document_search",
+              "args": {
+                "query": "invoices",
+                "search_type": "amount",
+                "doc_type": "invoice",
+                "comparison": "over",
+                "amount": 50000
+              },
+              "id": "call_SIIIhkVkaSAX8i2P9RXFxEn7",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 873,
+            "output_tokens": 34,
+            "total_tokens": 907,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Found 3 document(s):\n\nDocument 1 (ID: INV-003):\nTitle: Invoice #12347\nType: invoice\nAmount: $214,500.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12347\n                Date: 2024-03-01\n                Client: Global Corp\n\n                Services:\n                - Annual Subscription: $120,000\n                - Premiu...\n--------------------------------------------------\nDocument 2 (ID: CON-001):\nTitle: Service Agreement\nType: contract\nAmount: $180,000.00\nRelevance Score: 1.00\nPreview: \n                SERVICE AGREEMENT\n\n                This Service Agreement is entered into on January 1, 2024, between:\n                - Provider: DocDacity Solutions Inc.\n                - Client: H...\n--------------------------------------------------\nDocument 3 (ID: INV-002):\nTitle: Invoice #12346\nType: invoice\nAmount: $69,300.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12346\n                Date: 2024-02-20\n                Client: TechStart Inc.\n\n                Products:\n                - Enterprise License (Annual): $50,000\n              ...\n--------------------------------------------------\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "document_search",
+          "id": "730b28f2-225a-47f1-8848-7744ffd73a3a",
+          "tool_call_id": "call_SIIIhkVkaSAX8i2P9RXFxEn7",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "I found 3 documents related to invoices over $50,000. Here are the details:\n\n### Document 1\n- **ID**: INV-003\n- **Title**: Invoice #12347\n- **Amount**: $214,500.00\n- **Date**: 2024-03-01\n- **Client**: Global Corp\n- **Services**:\n  - Annual Subscription: $120,000\n\n### Document 2\n- **ID**: INV-002\n- **Title**: Invoice #12346\n- **Amount**: $69,300.00\n- **Date**: 2024-02-20\n- **Client**: TechStart Inc.\n- **Products**:\n  - Enterprise License (Annual): $50,000\n\n### Document 3\n- **ID**: CON-001 (Note: This is a contract, not an invoice)\n- **Title**: Service Agreement\n- **Amount**: $180,000.00\n- **Date**: January 1, 2024\n- **Provider**: DocDacity Solutions Inc.\n\n### Summary\n- **Total Invoices Found**: 2 (INV-003 and INV-002)\n- **Total Amount of Invoices**: \n  - Invoice #12347: $214,500.00\n  - Invoice #12346: $69,300.00\n\nIf you need further calculations or details, please let me know!",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 309,
+              "prompt_tokens": 1172,
+              "total_tokens": 1481,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYavpRhLIsoksSa1KtwCCIerFkub5",
+            "service_tier": "default",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--b134d67d-77c8-425a-bb2d-2fe21833c806-0",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1172,
+            "output_tokens": 309,
+            "total_tokens": 1481,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      ],
+      "intent": {
+        "intent_type": "calculation",
+        "confidence": 0.9,
+        "reasoning": "The user is requesting to find invoices that exceed a specific monetary threshold ($50,000), which involves a numerical comparison and thus falls under the calculation category."
+      },
+      "next_step": "end",
+      "conversation_summary": "I found 3 documents related to invoices over $50,000. Here are the details:\n\n### Document 1\n- **ID**: INV-003\n- **Title**: Invoice #12347\n- **Amount**: $214,500.00\n- **Date**: 2024-03-01\n- **Client**: Global Corp\n- **Services**:\n  - Annual Subscription: $120,000\n\n### Document 2\n- **ID**: INV-002\n- **Title**: Invoice #12346\n- **Amount**: $69,300.00\n- **Date**: 2024-02-20\n- **Client**: TechStart Inc.\n- **Products**:\n  - Enterprise License (Annual): $50,000\n\n### Document 3\n- **ID**: CON-001 (Note: This is a contract, not an invoice)\n- **Title**: Service Agreement\n- **Amount**: $180,000.00\n- **Date**: January 1, 2024\n- **Provider**: DocDacity Solutions Inc.\n\n### Summary\n- **Total Invoices Found**: 2 (INV-003 and INV-002)\n- **Total Amount of Invoices**: \n  - Invoice #12347: $214,500.00\n  - Invoice #12346: $69,300.00\n\nIf you need further calculations or details, please let me know!",
+      "active_documents": [
+        "INV-003",
+        "INV-002",
+        "CON-001"
+      ],
+      "current_response": {
+        "messages": [
+          {
+            "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "1108416e-74d0-4e29-b84a-f6129f3d4d00"
+          },
+          {
+            "content": "Find all invoices over $50,000",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "0833343d-0bbf-467f-b379-02487f869d53"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 29,
+                "prompt_tokens": 784,
+                "total_tokens": 813,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYavkhKAwT9CYzoojJGg8cHkCMbey",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--a673e9cd-9c16-4ddb-91a6-a91c137fd78e-0",
+            "tool_calls": [
+              {
+                "name": "document_search",
+                "args": {
+                  "comparison": "over",
+                  "amount": 50000,
+                  "search_type": "amount",
+                  "doc_type": "invoice"
+                },
+                "id": "call_Xev1Or1zDBdMa2reUdm7uWja",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 784,
+              "output_tokens": 29,
+              "total_tokens": 813,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Error invoking tool 'document_search' with kwargs {'comparison': 'over', 'amount': 50000, 'search_type': 'amount', 'doc_type': 'invoice'} with error:\n query: Field required\n Please fix the error and try again.",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "document_search",
+            "id": "85c8086c-f40a-4ace-99f5-3719f232c8e4",
+            "tool_call_id": "call_Xev1Or1zDBdMa2reUdm7uWja",
+            "artifact": null,
+            "status": "error"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 34,
+                "prompt_tokens": 873,
+                "total_tokens": 907,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYavmPNOilTx2BnSflEinzYuc3ZuO",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--7f808c7f-5876-4790-9473-bb0901e3609e-0",
+            "tool_calls": [
+              {
+                "name": "document_search",
+                "args": {
+                  "query": "invoices",
+                  "search_type": "amount",
+                  "doc_type": "invoice",
+                  "comparison": "over",
+                  "amount": 50000
+                },
+                "id": "call_SIIIhkVkaSAX8i2P9RXFxEn7",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 873,
+              "output_tokens": 34,
+              "total_tokens": 907,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Found 3 document(s):\n\nDocument 1 (ID: INV-003):\nTitle: Invoice #12347\nType: invoice\nAmount: $214,500.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12347\n                Date: 2024-03-01\n                Client: Global Corp\n\n                Services:\n                - Annual Subscription: $120,000\n                - Premiu...\n--------------------------------------------------\nDocument 2 (ID: CON-001):\nTitle: Service Agreement\nType: contract\nAmount: $180,000.00\nRelevance Score: 1.00\nPreview: \n                SERVICE AGREEMENT\n\n                This Service Agreement is entered into on January 1, 2024, between:\n                - Provider: DocDacity Solutions Inc.\n                - Client: H...\n--------------------------------------------------\nDocument 3 (ID: INV-002):\nTitle: Invoice #12346\nType: invoice\nAmount: $69,300.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12346\n                Date: 2024-02-20\n                Client: TechStart Inc.\n\n                Products:\n                - Enterprise License (Annual): $50,000\n              ...\n--------------------------------------------------\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "document_search",
+            "id": "730b28f2-225a-47f1-8848-7744ffd73a3a",
+            "tool_call_id": "call_SIIIhkVkaSAX8i2P9RXFxEn7",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "I found 3 documents related to invoices over $50,000. Here are the details:\n\n### Document 1\n- **ID**: INV-003\n- **Title**: Invoice #12347\n- **Amount**: $214,500.00\n- **Date**: 2024-03-01\n- **Client**: Global Corp\n- **Services**:\n  - Annual Subscription: $120,000\n\n### Document 2\n- **ID**: INV-002\n- **Title**: Invoice #12346\n- **Amount**: $69,300.00\n- **Date**: 2024-02-20\n- **Client**: TechStart Inc.\n- **Products**:\n  - Enterprise License (Annual): $50,000\n\n### Document 3\n- **ID**: CON-001 (Note: This is a contract, not an invoice)\n- **Title**: Service Agreement\n- **Amount**: $180,000.00\n- **Date**: January 1, 2024\n- **Provider**: DocDacity Solutions Inc.\n\n### Summary\n- **Total Invoices Found**: 2 (INV-003 and INV-002)\n- **Total Amount of Invoices**: \n  - Invoice #12347: $214,500.00\n  - Invoice #12346: $69,300.00\n\nIf you need further calculations or details, please let me know!",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 309,
+                "prompt_tokens": 1172,
+                "total_tokens": 1481,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYavpRhLIsoksSa1KtwCCIerFkub5",
+              "service_tier": "default",
+              "finish_reason": "stop",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--b134d67d-77c8-425a-bb2d-2fe21833c806-0",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1172,
+              "output_tokens": 309,
+              "total_tokens": 1481,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          }
+        ],
+        "structured_response": {
+          "expression": "214500 + 69300",
+          "result": 283800.0,
+          "explanation": "To find the total amount of invoices over $50,000, we add the amounts of Invoice #12347 ($214,500.00) and Invoice #12346 ($69,300.00). The calculation is as follows: 214500 + 69300 = 283800.",
+          "units": "USD",
+          "timestamp": "2024-03-01T00:00:00+00:00"
+        }
+      },
+      "tools_used": [
+        "document_search",
+        "document_search"
+      ],
+      "session_id": "a6bb82cd-b927-4f01-9050-e7e2f86052d4",
+      "user_id": "example_user_3",
+      "actions_taken": [
+        "classify_intent",
+        "calculation_agent"
+      ]
+    },
+    {
+      "user_input": "Calculate the total of these invoices",
+      "messages": [
+        {
+          "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "1108416e-74d0-4e29-b84a-f6129f3d4d00"
+        },
+        {
+          "content": "Find all invoices over $50,000",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "0833343d-0bbf-467f-b379-02487f869d53"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 29,
+              "prompt_tokens": 784,
+              "total_tokens": 813,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYavkhKAwT9CYzoojJGg8cHkCMbey",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--a673e9cd-9c16-4ddb-91a6-a91c137fd78e-0",
+          "tool_calls": [
+            {
+              "name": "document_search",
+              "args": {
+                "comparison": "over",
+                "amount": 50000,
+                "search_type": "amount",
+                "doc_type": "invoice"
+              },
+              "id": "call_Xev1Or1zDBdMa2reUdm7uWja",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 784,
+            "output_tokens": 29,
+            "total_tokens": 813,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Error invoking tool 'document_search' with kwargs {'comparison': 'over', 'amount': 50000, 'search_type': 'amount', 'doc_type': 'invoice'} with error:\n query: Field required\n Please fix the error and try again.",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "document_search",
+          "id": "85c8086c-f40a-4ace-99f5-3719f232c8e4",
+          "tool_call_id": "call_Xev1Or1zDBdMa2reUdm7uWja",
+          "artifact": null,
+          "status": "error"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 34,
+              "prompt_tokens": 873,
+              "total_tokens": 907,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYavmPNOilTx2BnSflEinzYuc3ZuO",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--7f808c7f-5876-4790-9473-bb0901e3609e-0",
+          "tool_calls": [
+            {
+              "name": "document_search",
+              "args": {
+                "query": "invoices",
+                "search_type": "amount",
+                "doc_type": "invoice",
+                "comparison": "over",
+                "amount": 50000
+              },
+              "id": "call_SIIIhkVkaSAX8i2P9RXFxEn7",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 873,
+            "output_tokens": 34,
+            "total_tokens": 907,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Found 3 document(s):\n\nDocument 1 (ID: INV-003):\nTitle: Invoice #12347\nType: invoice\nAmount: $214,500.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12347\n                Date: 2024-03-01\n                Client: Global Corp\n\n                Services:\n                - Annual Subscription: $120,000\n                - Premiu...\n--------------------------------------------------\nDocument 2 (ID: CON-001):\nTitle: Service Agreement\nType: contract\nAmount: $180,000.00\nRelevance Score: 1.00\nPreview: \n                SERVICE AGREEMENT\n\n                This Service Agreement is entered into on January 1, 2024, between:\n                - Provider: DocDacity Solutions Inc.\n                - Client: H...\n--------------------------------------------------\nDocument 3 (ID: INV-002):\nTitle: Invoice #12346\nType: invoice\nAmount: $69,300.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12346\n                Date: 2024-02-20\n                Client: TechStart Inc.\n\n                Products:\n                - Enterprise License (Annual): $50,000\n              ...\n--------------------------------------------------\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "document_search",
+          "id": "730b28f2-225a-47f1-8848-7744ffd73a3a",
+          "tool_call_id": "call_SIIIhkVkaSAX8i2P9RXFxEn7",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "I found 3 documents related to invoices over $50,000. Here are the details:\n\n### Document 1\n- **ID**: INV-003\n- **Title**: Invoice #12347\n- **Amount**: $214,500.00\n- **Date**: 2024-03-01\n- **Client**: Global Corp\n- **Services**:\n  - Annual Subscription: $120,000\n\n### Document 2\n- **ID**: INV-002\n- **Title**: Invoice #12346\n- **Amount**: $69,300.00\n- **Date**: 2024-02-20\n- **Client**: TechStart Inc.\n- **Products**:\n  - Enterprise License (Annual): $50,000\n\n### Document 3\n- **ID**: CON-001 (Note: This is a contract, not an invoice)\n- **Title**: Service Agreement\n- **Amount**: $180,000.00\n- **Date**: January 1, 2024\n- **Provider**: DocDacity Solutions Inc.\n\n### Summary\n- **Total Invoices Found**: 2 (INV-003 and INV-002)\n- **Total Amount of Invoices**: \n  - Invoice #12347: $214,500.00\n  - Invoice #12346: $69,300.00\n\nIf you need further calculations or details, please let me know!",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 309,
+              "prompt_tokens": 1172,
+              "total_tokens": 1481,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYavpRhLIsoksSa1KtwCCIerFkub5",
+            "service_tier": "default",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--b134d67d-77c8-425a-bb2d-2fe21833c806-0",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1172,
+            "output_tokens": 309,
+            "total_tokens": 1481,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "90ca6d0c-00ee-4c06-a969-8229e59a007f"
+        },
+        {
+          "content": "Calculate the total of these invoices",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "e7c2c90a-662b-4883-911f-a141c91c3e74"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 65,
+              "prompt_tokens": 1637,
+              "total_tokens": 1702,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYawF21M5MaIRWkfz9ea9fqE9fwsN",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--050c7a16-253b-4e3b-80fd-e168ae3aceda-0",
+          "tool_calls": [
+            {
+              "name": "calculator",
+              "args": {
+                "expression": "214500 + 69300"
+              },
+              "id": "call_N3bxntMUtKxaphjBcJVqu79u",
+              "type": "tool_call"
+            },
+            {
+              "name": "calculator",
+              "args": {
+                "expression": "214500"
+              },
+              "id": "call_4LZULYtF40Nl8nnDcEdkzr1e",
+              "type": "tool_call"
+            },
+            {
+              "name": "calculator",
+              "args": {
+                "expression": "69300"
+              },
+              "id": "call_0zyp0uT0OEdEhg1qyysRoayW",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1637,
+            "output_tokens": 65,
+            "total_tokens": 1702,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Result: 283800",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "calculator",
+          "id": "2a6bbe32-80fe-49c9-abad-8b6c6beaef9a",
+          "tool_call_id": "call_N3bxntMUtKxaphjBcJVqu79u",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "Result: 214500",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "calculator",
+          "id": "56044b76-f580-4182-a46b-2aa82f62ea1d",
+          "tool_call_id": "call_4LZULYtF40Nl8nnDcEdkzr1e",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "Result: 69300",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "calculator",
+          "id": "79711927-4aa7-4691-8821-0f9c66b36719",
+          "tool_call_id": "call_0zyp0uT0OEdEhg1qyysRoayW",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "To calculate the total of the invoices, I added the amounts of the two invoices found:\n\n1. **Invoice #12347**: $214,500.00\n2. **Invoice #12346**: $69,300.00\n\n### Calculation Steps:\n- **Step 1**: Add the amounts together:\n  \\[\n  214500 + 69300 = 283800\n  \\]\n\n### Total Amount:\n- **Total of Invoices**: $283,800.00\n\nThus, the total amount of the invoices over $50,000 is **$283,800.00**.",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 128,
+              "prompt_tokens": 1733,
+              "total_tokens": 1861,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYawIc56hB7BnPxyLXRSINCpgZ7dW",
+            "service_tier": "default",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--25465758-b143-40e9-a2ce-9f594528cae4-0",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1733,
+            "output_tokens": 128,
+            "total_tokens": 1861,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      ],
+      "intent": {
+        "intent_type": "calculation",
+        "confidence": 0.95,
+        "reasoning": "The user explicitly asked to 'calculate the total of these invoices', which indicates a request for a mathematical operation involving the amounts of the invoices."
+      },
+      "next_step": "end",
+      "conversation_summary": "The conversation involved finding invoices over $50,000 and calculating their total. Three documents were identified: Invoice #12347 for $214,500.00, Invoice #12346 for $69,300.00, and a Service Agreement (not an invoice) for $180,000.00. The total of the two invoices was calculated to be $283,800.00. No unresolved questions were noted.",
+      "active_documents": [
+        "INV-003",
+        "INV-002",
+        "CON-001"
+      ],
+      "current_response": {
+        "messages": [
+          {
+            "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "90ca6d0c-00ee-4c06-a969-8229e59a007f"
+          },
+          {
+            "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "1108416e-74d0-4e29-b84a-f6129f3d4d00"
+          },
+          {
+            "content": "Find all invoices over $50,000",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "0833343d-0bbf-467f-b379-02487f869d53"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 29,
+                "prompt_tokens": 784,
+                "total_tokens": 813,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYavkhKAwT9CYzoojJGg8cHkCMbey",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--a673e9cd-9c16-4ddb-91a6-a91c137fd78e-0",
+            "tool_calls": [
+              {
+                "name": "document_search",
+                "args": {
+                  "comparison": "over",
+                  "amount": 50000,
+                  "search_type": "amount",
+                  "doc_type": "invoice"
+                },
+                "id": "call_Xev1Or1zDBdMa2reUdm7uWja",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 784,
+              "output_tokens": 29,
+              "total_tokens": 813,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Error invoking tool 'document_search' with kwargs {'comparison': 'over', 'amount': 50000, 'search_type': 'amount', 'doc_type': 'invoice'} with error:\n query: Field required\n Please fix the error and try again.",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "document_search",
+            "id": "85c8086c-f40a-4ace-99f5-3719f232c8e4",
+            "tool_call_id": "call_Xev1Or1zDBdMa2reUdm7uWja",
+            "artifact": null,
+            "status": "error"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 34,
+                "prompt_tokens": 873,
+                "total_tokens": 907,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYavmPNOilTx2BnSflEinzYuc3ZuO",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--7f808c7f-5876-4790-9473-bb0901e3609e-0",
+            "tool_calls": [
+              {
+                "name": "document_search",
+                "args": {
+                  "query": "invoices",
+                  "search_type": "amount",
+                  "doc_type": "invoice",
+                  "comparison": "over",
+                  "amount": 50000
+                },
+                "id": "call_SIIIhkVkaSAX8i2P9RXFxEn7",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 873,
+              "output_tokens": 34,
+              "total_tokens": 907,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Found 3 document(s):\n\nDocument 1 (ID: INV-003):\nTitle: Invoice #12347\nType: invoice\nAmount: $214,500.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12347\n                Date: 2024-03-01\n                Client: Global Corp\n\n                Services:\n                - Annual Subscription: $120,000\n                - Premiu...\n--------------------------------------------------\nDocument 2 (ID: CON-001):\nTitle: Service Agreement\nType: contract\nAmount: $180,000.00\nRelevance Score: 1.00\nPreview: \n                SERVICE AGREEMENT\n\n                This Service Agreement is entered into on January 1, 2024, between:\n                - Provider: DocDacity Solutions Inc.\n                - Client: H...\n--------------------------------------------------\nDocument 3 (ID: INV-002):\nTitle: Invoice #12346\nType: invoice\nAmount: $69,300.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12346\n                Date: 2024-02-20\n                Client: TechStart Inc.\n\n                Products:\n                - Enterprise License (Annual): $50,000\n              ...\n--------------------------------------------------\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "document_search",
+            "id": "730b28f2-225a-47f1-8848-7744ffd73a3a",
+            "tool_call_id": "call_SIIIhkVkaSAX8i2P9RXFxEn7",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "I found 3 documents related to invoices over $50,000. Here are the details:\n\n### Document 1\n- **ID**: INV-003\n- **Title**: Invoice #12347\n- **Amount**: $214,500.00\n- **Date**: 2024-03-01\n- **Client**: Global Corp\n- **Services**:\n  - Annual Subscription: $120,000\n\n### Document 2\n- **ID**: INV-002\n- **Title**: Invoice #12346\n- **Amount**: $69,300.00\n- **Date**: 2024-02-20\n- **Client**: TechStart Inc.\n- **Products**:\n  - Enterprise License (Annual): $50,000\n\n### Document 3\n- **ID**: CON-001 (Note: This is a contract, not an invoice)\n- **Title**: Service Agreement\n- **Amount**: $180,000.00\n- **Date**: January 1, 2024\n- **Provider**: DocDacity Solutions Inc.\n\n### Summary\n- **Total Invoices Found**: 2 (INV-003 and INV-002)\n- **Total Amount of Invoices**: \n  - Invoice #12347: $214,500.00\n  - Invoice #12346: $69,300.00\n\nIf you need further calculations or details, please let me know!",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 309,
+                "prompt_tokens": 1172,
+                "total_tokens": 1481,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYavpRhLIsoksSa1KtwCCIerFkub5",
+              "service_tier": "default",
+              "finish_reason": "stop",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--b134d67d-77c8-425a-bb2d-2fe21833c806-0",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1172,
+              "output_tokens": 309,
+              "total_tokens": 1481,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Calculate the total of these invoices",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "e7c2c90a-662b-4883-911f-a141c91c3e74"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 65,
+                "prompt_tokens": 1637,
+                "total_tokens": 1702,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYawF21M5MaIRWkfz9ea9fqE9fwsN",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--050c7a16-253b-4e3b-80fd-e168ae3aceda-0",
+            "tool_calls": [
+              {
+                "name": "calculator",
+                "args": {
+                  "expression": "214500 + 69300"
+                },
+                "id": "call_N3bxntMUtKxaphjBcJVqu79u",
+                "type": "tool_call"
+              },
+              {
+                "name": "calculator",
+                "args": {
+                  "expression": "214500"
+                },
+                "id": "call_4LZULYtF40Nl8nnDcEdkzr1e",
+                "type": "tool_call"
+              },
+              {
+                "name": "calculator",
+                "args": {
+                  "expression": "69300"
+                },
+                "id": "call_0zyp0uT0OEdEhg1qyysRoayW",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1637,
+              "output_tokens": 65,
+              "total_tokens": 1702,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Result: 283800",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "calculator",
+            "id": "2a6bbe32-80fe-49c9-abad-8b6c6beaef9a",
+            "tool_call_id": "call_N3bxntMUtKxaphjBcJVqu79u",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "Result: 214500",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "calculator",
+            "id": "56044b76-f580-4182-a46b-2aa82f62ea1d",
+            "tool_call_id": "call_4LZULYtF40Nl8nnDcEdkzr1e",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "Result: 69300",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "calculator",
+            "id": "79711927-4aa7-4691-8821-0f9c66b36719",
+            "tool_call_id": "call_0zyp0uT0OEdEhg1qyysRoayW",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "To calculate the total of the invoices, I added the amounts of the two invoices found:\n\n1. **Invoice #12347**: $214,500.00\n2. **Invoice #12346**: $69,300.00\n\n### Calculation Steps:\n- **Step 1**: Add the amounts together:\n  \\[\n  214500 + 69300 = 283800\n  \\]\n\n### Total Amount:\n- **Total of Invoices**: $283,800.00\n\nThus, the total amount of the invoices over $50,000 is **$283,800.00**.",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 128,
+                "prompt_tokens": 1733,
+                "total_tokens": 1861,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYawIc56hB7BnPxyLXRSINCpgZ7dW",
+              "service_tier": "default",
+              "finish_reason": "stop",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--25465758-b143-40e9-a2ce-9f594528cae4-0",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1733,
+              "output_tokens": 128,
+              "total_tokens": 1861,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          }
+        ],
+        "structured_response": {
+          "expression": "214500 + 69300",
+          "result": 283800.0,
+          "explanation": "To find the total of the invoices, I added the amounts of Invoice #12347 ($214,500.00) and Invoice #12346 ($69,300.00). The calculation is as follows: 214500 + 69300 = 283800.",
+          "units": "USD",
+          "timestamp": "2024-03-01T12:00:00+00:00"
+        }
+      },
+      "tools_used": [
+        "document_search",
+        "document_search",
+        "calculator",
+        "calculator",
+        "calculator"
+      ],
+      "session_id": "a6bb82cd-b927-4f01-9050-e7e2f86052d4",
+      "user_id": "example_user_3",
+      "actions_taken": [
+        "classify_intent",
+        "calculation_agent",
+        "classify_intent",
+        "calculation_agent"
+      ]
+    },
+    {
+      "user_input": "Summarize the higher value invoice",
+      "messages": [
+        {
+          "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "1108416e-74d0-4e29-b84a-f6129f3d4d00"
+        },
+        {
+          "content": "Find all invoices over $50,000",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "0833343d-0bbf-467f-b379-02487f869d53"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 29,
+              "prompt_tokens": 784,
+              "total_tokens": 813,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYavkhKAwT9CYzoojJGg8cHkCMbey",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--a673e9cd-9c16-4ddb-91a6-a91c137fd78e-0",
+          "tool_calls": [
+            {
+              "name": "document_search",
+              "args": {
+                "comparison": "over",
+                "amount": 50000,
+                "search_type": "amount",
+                "doc_type": "invoice"
+              },
+              "id": "call_Xev1Or1zDBdMa2reUdm7uWja",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 784,
+            "output_tokens": 29,
+            "total_tokens": 813,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Error invoking tool 'document_search' with kwargs {'comparison': 'over', 'amount': 50000, 'search_type': 'amount', 'doc_type': 'invoice'} with error:\n query: Field required\n Please fix the error and try again.",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "document_search",
+          "id": "85c8086c-f40a-4ace-99f5-3719f232c8e4",
+          "tool_call_id": "call_Xev1Or1zDBdMa2reUdm7uWja",
+          "artifact": null,
+          "status": "error"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 34,
+              "prompt_tokens": 873,
+              "total_tokens": 907,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYavmPNOilTx2BnSflEinzYuc3ZuO",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--7f808c7f-5876-4790-9473-bb0901e3609e-0",
+          "tool_calls": [
+            {
+              "name": "document_search",
+              "args": {
+                "query": "invoices",
+                "search_type": "amount",
+                "doc_type": "invoice",
+                "comparison": "over",
+                "amount": 50000
+              },
+              "id": "call_SIIIhkVkaSAX8i2P9RXFxEn7",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 873,
+            "output_tokens": 34,
+            "total_tokens": 907,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Found 3 document(s):\n\nDocument 1 (ID: INV-003):\nTitle: Invoice #12347\nType: invoice\nAmount: $214,500.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12347\n                Date: 2024-03-01\n                Client: Global Corp\n\n                Services:\n                - Annual Subscription: $120,000\n                - Premiu...\n--------------------------------------------------\nDocument 2 (ID: CON-001):\nTitle: Service Agreement\nType: contract\nAmount: $180,000.00\nRelevance Score: 1.00\nPreview: \n                SERVICE AGREEMENT\n\n                This Service Agreement is entered into on January 1, 2024, between:\n                - Provider: DocDacity Solutions Inc.\n                - Client: H...\n--------------------------------------------------\nDocument 3 (ID: INV-002):\nTitle: Invoice #12346\nType: invoice\nAmount: $69,300.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12346\n                Date: 2024-02-20\n                Client: TechStart Inc.\n\n                Products:\n                - Enterprise License (Annual): $50,000\n              ...\n--------------------------------------------------\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "document_search",
+          "id": "730b28f2-225a-47f1-8848-7744ffd73a3a",
+          "tool_call_id": "call_SIIIhkVkaSAX8i2P9RXFxEn7",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "I found 3 documents related to invoices over $50,000. Here are the details:\n\n### Document 1\n- **ID**: INV-003\n- **Title**: Invoice #12347\n- **Amount**: $214,500.00\n- **Date**: 2024-03-01\n- **Client**: Global Corp\n- **Services**:\n  - Annual Subscription: $120,000\n\n### Document 2\n- **ID**: INV-002\n- **Title**: Invoice #12346\n- **Amount**: $69,300.00\n- **Date**: 2024-02-20\n- **Client**: TechStart Inc.\n- **Products**:\n  - Enterprise License (Annual): $50,000\n\n### Document 3\n- **ID**: CON-001 (Note: This is a contract, not an invoice)\n- **Title**: Service Agreement\n- **Amount**: $180,000.00\n- **Date**: January 1, 2024\n- **Provider**: DocDacity Solutions Inc.\n\n### Summary\n- **Total Invoices Found**: 2 (INV-003 and INV-002)\n- **Total Amount of Invoices**: \n  - Invoice #12347: $214,500.00\n  - Invoice #12346: $69,300.00\n\nIf you need further calculations or details, please let me know!",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 309,
+              "prompt_tokens": 1172,
+              "total_tokens": 1481,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYavpRhLIsoksSa1KtwCCIerFkub5",
+            "service_tier": "default",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--b134d67d-77c8-425a-bb2d-2fe21833c806-0",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1172,
+            "output_tokens": 309,
+            "total_tokens": 1481,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "90ca6d0c-00ee-4c06-a969-8229e59a007f"
+        },
+        {
+          "content": "Calculate the total of these invoices",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "e7c2c90a-662b-4883-911f-a141c91c3e74"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 65,
+              "prompt_tokens": 1637,
+              "total_tokens": 1702,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYawF21M5MaIRWkfz9ea9fqE9fwsN",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--050c7a16-253b-4e3b-80fd-e168ae3aceda-0",
+          "tool_calls": [
+            {
+              "name": "calculator",
+              "args": {
+                "expression": "214500 + 69300"
+              },
+              "id": "call_N3bxntMUtKxaphjBcJVqu79u",
+              "type": "tool_call"
+            },
+            {
+              "name": "calculator",
+              "args": {
+                "expression": "214500"
+              },
+              "id": "call_4LZULYtF40Nl8nnDcEdkzr1e",
+              "type": "tool_call"
+            },
+            {
+              "name": "calculator",
+              "args": {
+                "expression": "69300"
+              },
+              "id": "call_0zyp0uT0OEdEhg1qyysRoayW",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1637,
+            "output_tokens": 65,
+            "total_tokens": 1702,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Result: 283800",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "calculator",
+          "id": "2a6bbe32-80fe-49c9-abad-8b6c6beaef9a",
+          "tool_call_id": "call_N3bxntMUtKxaphjBcJVqu79u",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "Result: 214500",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "calculator",
+          "id": "56044b76-f580-4182-a46b-2aa82f62ea1d",
+          "tool_call_id": "call_4LZULYtF40Nl8nnDcEdkzr1e",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "Result: 69300",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "calculator",
+          "id": "79711927-4aa7-4691-8821-0f9c66b36719",
+          "tool_call_id": "call_0zyp0uT0OEdEhg1qyysRoayW",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "To calculate the total of the invoices, I added the amounts of the two invoices found:\n\n1. **Invoice #12347**: $214,500.00\n2. **Invoice #12346**: $69,300.00\n\n### Calculation Steps:\n- **Step 1**: Add the amounts together:\n  \\[\n  214500 + 69300 = 283800\n  \\]\n\n### Total Amount:\n- **Total of Invoices**: $283,800.00\n\nThus, the total amount of the invoices over $50,000 is **$283,800.00**.",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 128,
+              "prompt_tokens": 1733,
+              "total_tokens": 1861,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYawIc56hB7BnPxyLXRSINCpgZ7dW",
+            "service_tier": "default",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--25465758-b143-40e9-a2ce-9f594528cae4-0",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1733,
+            "output_tokens": 128,
+            "total_tokens": 1861,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "You are an expert document summarizer specializing in financial and healthcare documents.\n\nYour approach:\n- Extract key information and main points\n- Organize summaries logically\n- Highlight important numbers, dates, and parties\n- Keep summaries concise but comprehensive\n\nGuidelines:\n1. First search for and read the relevant documents\n2. Structure summaries with clear sections\n3. Include document IDs in your summary\n4. Focus on actionable information\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "2bf0c311-85c8-4cb3-81c4-28e557791c95"
+        },
+        {
+          "content": "Summarize the higher value invoice",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "ceb19e0f-0f0b-44c7-a675-69dadd3c370f"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 17,
+              "prompt_tokens": 1965,
+              "total_tokens": 1982,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYawW88UoIkyuN3wqmc19oQNTgtGA",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--1506dee3-dc6d-4529-ae9d-ef0fff816331-0",
+          "tool_calls": [
+            {
+              "name": "document_reader",
+              "args": {
+                "doc_id": "INV-003"
+              },
+              "id": "call_tujZvoW4b61n48zMzSfEjZlt",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1965,
+            "output_tokens": 17,
+            "total_tokens": 1982,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Document INV-003:\nAmount: $214,500.00\n\n\n                Invoice #12347\n                Date: 2024-03-01\n                Client: Global Corp\n\n                Services:\n                - Annual Subscription: $120,000\n                - Premium Support: $30,000\n                - Custom Development: $45,000\n\n                Subtotal: $195,000\n                Tax (10%): $19,500\n                Total Due: $214,500\n\n                Payment Terms: Net 60 days\n                ",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "document_reader",
+          "id": "e9ab54fd-b8a5-41c9-a212-80c5074ac4ee",
+          "tool_call_id": "call_tujZvoW4b61n48zMzSfEjZlt",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "### Summary of Higher Value Invoice\n\n- **Document ID**: INV-003\n- **Title**: Invoice #12347\n- **Date**: March 1, 2024\n- **Client**: Global Corp\n- **Total Amount**: $214,500.00\n\n#### Services Provided:\n1. **Annual Subscription**: $120,000\n2. **Premium Support**: $30,000\n3. **Custom Development**: $45,000\n\n#### Financial Breakdown:\n- **Subtotal**: $195,000\n- **Tax (10%)**: $19,500\n- **Total Due**: $214,500\n\n#### Payment Terms:\n- **Net**: 60 days\n\nThis invoice represents a comprehensive service package provided to Global Corp, with a total due amount of $214,500.00, payable within 60 days.",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 184,
+              "prompt_tokens": 2099,
+              "total_tokens": 2283,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYawYKUpXHwGWhyUOm0RonB5km8fS",
+            "service_tier": "default",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--0e6c6516-5e7f-4fc7-8a79-de3fe3b647d9-0",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 2099,
+            "output_tokens": 184,
+            "total_tokens": 2283,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      ],
+      "intent": {
+        "intent_type": "summarization",
+        "confidence": 0.9,
+        "reasoning": "The user is requesting a summary of the higher value invoice, which indicates they want key points extracted from the document rather than asking a question or performing a calculation."
+      },
+      "next_step": "end",
+      "conversation_summary": "### Summary of Higher Value Invoice\n\n- **Document ID**: INV-003\n- **Title**: Invoice #12347\n- **Date**: March 1, 2024\n- **Client**: Global Corp\n- **Total Amount**: $214,500.00\n\n#### Services Provided:\n1. **Annual Subscription**: $120,000\n2. **Premium Support**: $30,000\n3. **Custom Development**: $45,000\n\n#### Financial Breakdown:\n- **Subtotal**: $195,000\n- **Tax (10%)**: $19,500\n- **Total Due**: $214,500\n\n#### Payment Terms:\n- **Net**: 60 days\n\nThis invoice represents a comprehensive service package provided to Global Corp, with a total due amount of $214,500.00, payable within 60 days.",
+      "active_documents": [
+        "INV-003"
+      ],
+      "current_response": {
+        "messages": [
+          {
+            "content": "You are an expert document summarizer specializing in financial and healthcare documents.\n\nYour approach:\n- Extract key information and main points\n- Organize summaries logically\n- Highlight important numbers, dates, and parties\n- Keep summaries concise but comprehensive\n\nGuidelines:\n1. First search for and read the relevant documents\n2. Structure summaries with clear sections\n3. Include document IDs in your summary\n4. Focus on actionable information\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "2bf0c311-85c8-4cb3-81c4-28e557791c95"
+          },
+          {
+            "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "1108416e-74d0-4e29-b84a-f6129f3d4d00"
+          },
+          {
+            "content": "Find all invoices over $50,000",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "0833343d-0bbf-467f-b379-02487f869d53"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 29,
+                "prompt_tokens": 784,
+                "total_tokens": 813,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYavkhKAwT9CYzoojJGg8cHkCMbey",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--a673e9cd-9c16-4ddb-91a6-a91c137fd78e-0",
+            "tool_calls": [
+              {
+                "name": "document_search",
+                "args": {
+                  "comparison": "over",
+                  "amount": 50000,
+                  "search_type": "amount",
+                  "doc_type": "invoice"
+                },
+                "id": "call_Xev1Or1zDBdMa2reUdm7uWja",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 784,
+              "output_tokens": 29,
+              "total_tokens": 813,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Error invoking tool 'document_search' with kwargs {'comparison': 'over', 'amount': 50000, 'search_type': 'amount', 'doc_type': 'invoice'} with error:\n query: Field required\n Please fix the error and try again.",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "document_search",
+            "id": "85c8086c-f40a-4ace-99f5-3719f232c8e4",
+            "tool_call_id": "call_Xev1Or1zDBdMa2reUdm7uWja",
+            "artifact": null,
+            "status": "error"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 34,
+                "prompt_tokens": 873,
+                "total_tokens": 907,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYavmPNOilTx2BnSflEinzYuc3ZuO",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--7f808c7f-5876-4790-9473-bb0901e3609e-0",
+            "tool_calls": [
+              {
+                "name": "document_search",
+                "args": {
+                  "query": "invoices",
+                  "search_type": "amount",
+                  "doc_type": "invoice",
+                  "comparison": "over",
+                  "amount": 50000
+                },
+                "id": "call_SIIIhkVkaSAX8i2P9RXFxEn7",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 873,
+              "output_tokens": 34,
+              "total_tokens": 907,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Found 3 document(s):\n\nDocument 1 (ID: INV-003):\nTitle: Invoice #12347\nType: invoice\nAmount: $214,500.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12347\n                Date: 2024-03-01\n                Client: Global Corp\n\n                Services:\n                - Annual Subscription: $120,000\n                - Premiu...\n--------------------------------------------------\nDocument 2 (ID: CON-001):\nTitle: Service Agreement\nType: contract\nAmount: $180,000.00\nRelevance Score: 1.00\nPreview: \n                SERVICE AGREEMENT\n\n                This Service Agreement is entered into on January 1, 2024, between:\n                - Provider: DocDacity Solutions Inc.\n                - Client: H...\n--------------------------------------------------\nDocument 3 (ID: INV-002):\nTitle: Invoice #12346\nType: invoice\nAmount: $69,300.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12346\n                Date: 2024-02-20\n                Client: TechStart Inc.\n\n                Products:\n                - Enterprise License (Annual): $50,000\n              ...\n--------------------------------------------------\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "document_search",
+            "id": "730b28f2-225a-47f1-8848-7744ffd73a3a",
+            "tool_call_id": "call_SIIIhkVkaSAX8i2P9RXFxEn7",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "I found 3 documents related to invoices over $50,000. Here are the details:\n\n### Document 1\n- **ID**: INV-003\n- **Title**: Invoice #12347\n- **Amount**: $214,500.00\n- **Date**: 2024-03-01\n- **Client**: Global Corp\n- **Services**:\n  - Annual Subscription: $120,000\n\n### Document 2\n- **ID**: INV-002\n- **Title**: Invoice #12346\n- **Amount**: $69,300.00\n- **Date**: 2024-02-20\n- **Client**: TechStart Inc.\n- **Products**:\n  - Enterprise License (Annual): $50,000\n\n### Document 3\n- **ID**: CON-001 (Note: This is a contract, not an invoice)\n- **Title**: Service Agreement\n- **Amount**: $180,000.00\n- **Date**: January 1, 2024\n- **Provider**: DocDacity Solutions Inc.\n\n### Summary\n- **Total Invoices Found**: 2 (INV-003 and INV-002)\n- **Total Amount of Invoices**: \n  - Invoice #12347: $214,500.00\n  - Invoice #12346: $69,300.00\n\nIf you need further calculations or details, please let me know!",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 309,
+                "prompt_tokens": 1172,
+                "total_tokens": 1481,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYavpRhLIsoksSa1KtwCCIerFkub5",
+              "service_tier": "default",
+              "finish_reason": "stop",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--b134d67d-77c8-425a-bb2d-2fe21833c806-0",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1172,
+              "output_tokens": 309,
+              "total_tokens": 1481,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "90ca6d0c-00ee-4c06-a969-8229e59a007f"
+          },
+          {
+            "content": "Calculate the total of these invoices",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "e7c2c90a-662b-4883-911f-a141c91c3e74"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 65,
+                "prompt_tokens": 1637,
+                "total_tokens": 1702,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYawF21M5MaIRWkfz9ea9fqE9fwsN",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--050c7a16-253b-4e3b-80fd-e168ae3aceda-0",
+            "tool_calls": [
+              {
+                "name": "calculator",
+                "args": {
+                  "expression": "214500 + 69300"
+                },
+                "id": "call_N3bxntMUtKxaphjBcJVqu79u",
+                "type": "tool_call"
+              },
+              {
+                "name": "calculator",
+                "args": {
+                  "expression": "214500"
+                },
+                "id": "call_4LZULYtF40Nl8nnDcEdkzr1e",
+                "type": "tool_call"
+              },
+              {
+                "name": "calculator",
+                "args": {
+                  "expression": "69300"
+                },
+                "id": "call_0zyp0uT0OEdEhg1qyysRoayW",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1637,
+              "output_tokens": 65,
+              "total_tokens": 1702,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Result: 283800",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "calculator",
+            "id": "2a6bbe32-80fe-49c9-abad-8b6c6beaef9a",
+            "tool_call_id": "call_N3bxntMUtKxaphjBcJVqu79u",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "Result: 214500",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "calculator",
+            "id": "56044b76-f580-4182-a46b-2aa82f62ea1d",
+            "tool_call_id": "call_4LZULYtF40Nl8nnDcEdkzr1e",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "Result: 69300",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "calculator",
+            "id": "79711927-4aa7-4691-8821-0f9c66b36719",
+            "tool_call_id": "call_0zyp0uT0OEdEhg1qyysRoayW",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "To calculate the total of the invoices, I added the amounts of the two invoices found:\n\n1. **Invoice #12347**: $214,500.00\n2. **Invoice #12346**: $69,300.00\n\n### Calculation Steps:\n- **Step 1**: Add the amounts together:\n  \\[\n  214500 + 69300 = 283800\n  \\]\n\n### Total Amount:\n- **Total of Invoices**: $283,800.00\n\nThus, the total amount of the invoices over $50,000 is **$283,800.00**.",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 128,
+                "prompt_tokens": 1733,
+                "total_tokens": 1861,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYawIc56hB7BnPxyLXRSINCpgZ7dW",
+              "service_tier": "default",
+              "finish_reason": "stop",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--25465758-b143-40e9-a2ce-9f594528cae4-0",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1733,
+              "output_tokens": 128,
+              "total_tokens": 1861,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Summarize the higher value invoice",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "ceb19e0f-0f0b-44c7-a675-69dadd3c370f"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 17,
+                "prompt_tokens": 1965,
+                "total_tokens": 1982,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYawW88UoIkyuN3wqmc19oQNTgtGA",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--1506dee3-dc6d-4529-ae9d-ef0fff816331-0",
+            "tool_calls": [
+              {
+                "name": "document_reader",
+                "args": {
+                  "doc_id": "INV-003"
+                },
+                "id": "call_tujZvoW4b61n48zMzSfEjZlt",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1965,
+              "output_tokens": 17,
+              "total_tokens": 1982,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Document INV-003:\nAmount: $214,500.00\n\n\n                Invoice #12347\n                Date: 2024-03-01\n                Client: Global Corp\n\n                Services:\n                - Annual Subscription: $120,000\n                - Premium Support: $30,000\n                - Custom Development: $45,000\n\n                Subtotal: $195,000\n                Tax (10%): $19,500\n                Total Due: $214,500\n\n                Payment Terms: Net 60 days\n                ",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "document_reader",
+            "id": "e9ab54fd-b8a5-41c9-a212-80c5074ac4ee",
+            "tool_call_id": "call_tujZvoW4b61n48zMzSfEjZlt",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "### Summary of Higher Value Invoice\n\n- **Document ID**: INV-003\n- **Title**: Invoice #12347\n- **Date**: March 1, 2024\n- **Client**: Global Corp\n- **Total Amount**: $214,500.00\n\n#### Services Provided:\n1. **Annual Subscription**: $120,000\n2. **Premium Support**: $30,000\n3. **Custom Development**: $45,000\n\n#### Financial Breakdown:\n- **Subtotal**: $195,000\n- **Tax (10%)**: $19,500\n- **Total Due**: $214,500\n\n#### Payment Terms:\n- **Net**: 60 days\n\nThis invoice represents a comprehensive service package provided to Global Corp, with a total due amount of $214,500.00, payable within 60 days.",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 184,
+                "prompt_tokens": 2099,
+                "total_tokens": 2283,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYawYKUpXHwGWhyUOm0RonB5km8fS",
+              "service_tier": "default",
+              "finish_reason": "stop",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--0e6c6516-5e7f-4fc7-8a79-de3fe3b647d9-0",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 2099,
+              "output_tokens": 184,
+              "total_tokens": 2283,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          }
+        ],
+        "structured_response": {
+          "original_length": 0,
+          "summary": "### Summary of Higher Value Invoice\n\n- **Document ID**: INV-003\n- **Title**: Invoice #12347\n- **Date**: March 1, 2024\n- **Client**: Global Corp\n- **Total Amount**: $214,500.00\n\n#### Services Provided:\n1. **Annual Subscription**: $120,000\n2. **Premium Support**: $30,000\n3. **Custom Development**: $45,000\n\n#### Financial Breakdown:\n- **Subtotal**: $195,000\n- **Tax (10%)**: $19,500\n- **Total Due**: $214,500\n\n#### Payment Terms:\n- **Net**: 60 days\n\nThis invoice represents a comprehensive service package provided to Global Corp, with a total due amount of $214,500.00, payable within 60 days.",
+          "key_points": [
+            "Document ID: INV-003",
+            "Invoice Date: March 1, 2024",
+            "Client: Global Corp",
+            "Total Amount: $214,500.00",
+            "Services: Annual Subscription, Premium Support, Custom Development",
+            "Subtotal: $195,000",
+            "Tax: $19,500",
+            "Payment Terms: Net 60 days"
+          ],
+          "document_ids": [
+            "INV-003"
+          ],
+          "timestamp": "2024-03-01T00:00:00+00:00"
+        }
+      },
+      "tools_used": [
+        "document_search",
+        "document_search",
+        "calculator",
+        "calculator",
+        "calculator",
+        "document_reader"
+      ],
+      "session_id": "a6bb82cd-b927-4f01-9050-e7e2f86052d4",
+      "user_id": "example_user_3",
+      "actions_taken": [
+        "classify_intent",
+        "calculation_agent",
+        "classify_intent",
+        "calculation_agent",
+        "classify_intent",
+        "summarization_agent"
+      ]
+    }
+  ],
+  "document_context": [
+    "INV-002",
+    "INV-003",
+    "CON-001"
+  ],
+  "created_at": "2025-11-05T19:44:42.082905",
+  "last_updated": "2025-11-05T19:45:57.700063"
+}
