@@ -1,0 +1,34 @@
+[
+  {
+    "timestamp": "2025-11-05T19:34:39.238618",
+    "tool_name": "calculator",
+    "input": {
+      "expression": "2 + 2"
+    },
+    "output": "{'result': 4}"
+  },
+  {
+    "timestamp": "2025-11-05T19:34:39.239446",
+    "tool_name": "calculator",
+    "input": {
+      "expression": "100 * 0.15"
+    },
+    "output": "{'result': 15.0}"
+  },
+  {
+    "timestamp": "2025-11-05T19:34:39.240084",
+    "tool_name": "calculator",
+    "input": {
+      "expression": "(69300 + 214500)"
+    },
+    "output": "{'result': 283800}"
+  },
+  {
+    "timestamp": "2025-11-05T19:34:39.240695",
+    "tool_name": "calculator",
+    "input": {
+      "expression": "22000 * 0.15"
+    },
+    "output": "{'result': 3300.0}"
+  }
+]

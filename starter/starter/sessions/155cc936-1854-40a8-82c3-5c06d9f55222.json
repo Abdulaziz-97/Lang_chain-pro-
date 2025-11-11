@@ -1,0 +1,2132 @@
+{
+  "session_id": "155cc936-1854-40a8-82c3-5c06d9f55222",
+  "user_id": "example_user_1",
+  "conversation_history": [
+    {
+      "user_input": "What's the total amount in invoice INV-001?",
+      "messages": [
+        {
+          "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "b484db80-c3c6-4b71-9ef7-ac41bdc7a36c"
+        },
+        {
+          "content": "What's the total amount in invoice INV-001?",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "11493341-a39f-46bc-99c4-a3f369da8a25"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 17,
+              "prompt_tokens": 786,
+              "total_tokens": 803,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_51db84afab",
+            "id": "chatcmpl-CYas9knHikVDZ0ag5vQnYBFlrCCrI",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--fe9ab019-b928-45ca-a86f-2a2262b87658-0",
+          "tool_calls": [
+            {
+              "name": "document_reader",
+              "args": {
+                "doc_id": "INV-001"
+              },
+              "id": "call_E9FinjzTZOeuXn3C2b6SUqd3",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 786,
+            "output_tokens": 17,
+            "total_tokens": 803,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Document INV-001:\n\n\n                Invoice #12345\n                Date: 2024-01-15\n                Client: Acme Corporation\n\n                Services Rendered:\n                - Consulting Services: $5,000\n                - Software Development: $12,500\n                - Support & Maintenance: $2,500\n\n                Subtotal: $20,000\n                Tax (10%): $2,000\n\n                Payment Terms: Net 30 days\n                ",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "document_reader",
+          "id": "8f58273b-4c61-4561-aafc-7804d4cc2bcd",
+          "tool_call_id": "call_E9FinjzTZOeuXn3C2b6SUqd3",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "The total amount in invoice INV-001 can be calculated by adding the subtotal and the tax. Here are the relevant values extracted from the document:\n\n- Subtotal: $20,000\n- Tax (10%): $2,000\n\nNow, let's calculate the total amount:\n\n1. **Add the subtotal and tax**:\n   \\[\n   \\text{Total Amount} = \\text{Subtotal} + \\text{Tax}\n   \\]\n\n   Substituting the values:\n   \\[\n   \\text{Total Amount} = 20000 + 2000\n   \\]\n\nNow, I will use the calculator tool to perform this addition.",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 154,
+              "prompt_tokens": 906,
+              "total_tokens": 1060,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYasAzGEWlH4S51pEizxdRA9PsUxi",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--85b30c6e-8d84-48eb-8e0e-4aa5b9c956ba-0",
+          "tool_calls": [
+            {
+              "name": "calculator",
+              "args": {
+                "expression": "20000 + 2000"
+              },
+              "id": "call_oKr0PmmcrwcfR2y4LZ6XZRHZ",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 906,
+            "output_tokens": 154,
+            "total_tokens": 1060,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Result: 22000",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "calculator",
+          "id": "e282e9de-6043-4216-b847-a20d796fffeb",
+          "tool_call_id": "call_oKr0PmmcrwcfR2y4LZ6XZRHZ",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "The total amount in invoice INV-001 is **$22,000**. \n\nThis total is derived from adding the subtotal of $20,000 and the tax of $2,000.",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 40,
+              "prompt_tokens": 1075,
+              "total_tokens": 1115,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 1024
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYasFoe2KkJWq9RHyl0DcFtumBb9A",
+            "service_tier": "default",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--04025c3d-92f3-4dff-81b6-ae842fea82b8-0",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1075,
+            "output_tokens": 40,
+            "total_tokens": 1115,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 1024
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      ],
+      "intent": {
+        "intent_type": "calculation",
+        "confidence": 0.9,
+        "reasoning": "The user is asking for the total amount in a specific invoice, which implies a need for numerical computation related to that document."
+      },
+      "next_step": "end",
+      "conversation_summary": "The total amount in invoice INV-001 is $22,000, calculated by adding the subtotal of $20,000 and the tax of $2,000. The invoice details include consulting services for $5,000, software development for $12,500, and support & maintenance for $2,500, leading to a subtotal of $20,000 and a 10% tax of $2,000.",
+      "active_documents": [
+        "INV-001"
+      ],
+      "current_response": {
+        "messages": [
+          {
+            "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "b484db80-c3c6-4b71-9ef7-ac41bdc7a36c"
+          },
+          {
+            "content": "What's the total amount in invoice INV-001?",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "11493341-a39f-46bc-99c4-a3f369da8a25"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 17,
+                "prompt_tokens": 786,
+                "total_tokens": 803,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_51db84afab",
+              "id": "chatcmpl-CYas9knHikVDZ0ag5vQnYBFlrCCrI",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--fe9ab019-b928-45ca-a86f-2a2262b87658-0",
+            "tool_calls": [
+              {
+                "name": "document_reader",
+                "args": {
+                  "doc_id": "INV-001"
+                },
+                "id": "call_E9FinjzTZOeuXn3C2b6SUqd3",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 786,
+              "output_tokens": 17,
+              "total_tokens": 803,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Document INV-001:\n\n\n                Invoice #12345\n                Date: 2024-01-15\n                Client: Acme Corporation\n\n                Services Rendered:\n                - Consulting Services: $5,000\n                - Software Development: $12,500\n                - Support & Maintenance: $2,500\n\n                Subtotal: $20,000\n                Tax (10%): $2,000\n\n                Payment Terms: Net 30 days\n                ",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "document_reader",
+            "id": "8f58273b-4c61-4561-aafc-7804d4cc2bcd",
+            "tool_call_id": "call_E9FinjzTZOeuXn3C2b6SUqd3",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "The total amount in invoice INV-001 can be calculated by adding the subtotal and the tax. Here are the relevant values extracted from the document:\n\n- Subtotal: $20,000\n- Tax (10%): $2,000\n\nNow, let's calculate the total amount:\n\n1. **Add the subtotal and tax**:\n   \\[\n   \\text{Total Amount} = \\text{Subtotal} + \\text{Tax}\n   \\]\n\n   Substituting the values:\n   \\[\n   \\text{Total Amount} = 20000 + 2000\n   \\]\n\nNow, I will use the calculator tool to perform this addition.",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 154,
+                "prompt_tokens": 906,
+                "total_tokens": 1060,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYasAzGEWlH4S51pEizxdRA9PsUxi",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--85b30c6e-8d84-48eb-8e0e-4aa5b9c956ba-0",
+            "tool_calls": [
+              {
+                "name": "calculator",
+                "args": {
+                  "expression": "20000 + 2000"
+                },
+                "id": "call_oKr0PmmcrwcfR2y4LZ6XZRHZ",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 906,
+              "output_tokens": 154,
+              "total_tokens": 1060,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Result: 22000",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "calculator",
+            "id": "e282e9de-6043-4216-b847-a20d796fffeb",
+            "tool_call_id": "call_oKr0PmmcrwcfR2y4LZ6XZRHZ",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "The total amount in invoice INV-001 is **$22,000**. \n\nThis total is derived from adding the subtotal of $20,000 and the tax of $2,000.",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 40,
+                "prompt_tokens": 1075,
+                "total_tokens": 1115,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 1024
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYasFoe2KkJWq9RHyl0DcFtumBb9A",
+              "service_tier": "default",
+              "finish_reason": "stop",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--04025c3d-92f3-4dff-81b6-ae842fea82b8-0",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1075,
+              "output_tokens": 40,
+              "total_tokens": 1115,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 1024
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          }
+        ],
+        "structured_response": {
+          "expression": "20000 + 2000",
+          "result": 22000.0,
+          "explanation": "To find the total amount in invoice INV-001, we add the subtotal of $20,000 to the tax of $2,000. The calculation is as follows: Total Amount = Subtotal + Tax = 20000 + 2000 = 22000.",
+          "units": "USD",
+          "timestamp": "2024-01-15T00:00:00+00:00"
+        }
+      },
+      "tools_used": [
+        "document_reader",
+        "calculator"
+      ],
+      "session_id": "155cc936-1854-40a8-82c3-5c06d9f55222",
+      "user_id": "example_user_1",
+      "actions_taken": [
+        "classify_intent",
+        "calculation_agent"
+      ]
+    },
+    {
+      "user_input": "Calculate 15% of that amount",
+      "messages": [
+        {
+          "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "b484db80-c3c6-4b71-9ef7-ac41bdc7a36c"
+        },
+        {
+          "content": "What's the total amount in invoice INV-001?",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "11493341-a39f-46bc-99c4-a3f369da8a25"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 17,
+              "prompt_tokens": 786,
+              "total_tokens": 803,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_51db84afab",
+            "id": "chatcmpl-CYas9knHikVDZ0ag5vQnYBFlrCCrI",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--fe9ab019-b928-45ca-a86f-2a2262b87658-0",
+          "tool_calls": [
+            {
+              "name": "document_reader",
+              "args": {
+                "doc_id": "INV-001"
+              },
+              "id": "call_E9FinjzTZOeuXn3C2b6SUqd3",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 786,
+            "output_tokens": 17,
+            "total_tokens": 803,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Document INV-001:\n\n\n                Invoice #12345\n                Date: 2024-01-15\n                Client: Acme Corporation\n\n                Services Rendered:\n                - Consulting Services: $5,000\n                - Software Development: $12,500\n                - Support & Maintenance: $2,500\n\n                Subtotal: $20,000\n                Tax (10%): $2,000\n\n                Payment Terms: Net 30 days\n                ",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "document_reader",
+          "id": "8f58273b-4c61-4561-aafc-7804d4cc2bcd",
+          "tool_call_id": "call_E9FinjzTZOeuXn3C2b6SUqd3",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "The total amount in invoice INV-001 can be calculated by adding the subtotal and the tax. Here are the relevant values extracted from the document:\n\n- Subtotal: $20,000\n- Tax (10%): $2,000\n\nNow, let's calculate the total amount:\n\n1. **Add the subtotal and tax**:\n   \\[\n   \\text{Total Amount} = \\text{Subtotal} + \\text{Tax}\n   \\]\n\n   Substituting the values:\n   \\[\n   \\text{Total Amount} = 20000 + 2000\n   \\]\n\nNow, I will use the calculator tool to perform this addition.",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 154,
+              "prompt_tokens": 906,
+              "total_tokens": 1060,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYasAzGEWlH4S51pEizxdRA9PsUxi",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--85b30c6e-8d84-48eb-8e0e-4aa5b9c956ba-0",
+          "tool_calls": [
+            {
+              "name": "calculator",
+              "args": {
+                "expression": "20000 + 2000"
+              },
+              "id": "call_oKr0PmmcrwcfR2y4LZ6XZRHZ",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 906,
+            "output_tokens": 154,
+            "total_tokens": 1060,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Result: 22000",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "calculator",
+          "id": "e282e9de-6043-4216-b847-a20d796fffeb",
+          "tool_call_id": "call_oKr0PmmcrwcfR2y4LZ6XZRHZ",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "The total amount in invoice INV-001 is **$22,000**. \n\nThis total is derived from adding the subtotal of $20,000 and the tax of $2,000.",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 40,
+              "prompt_tokens": 1075,
+              "total_tokens": 1115,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 1024
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYasFoe2KkJWq9RHyl0DcFtumBb9A",
+            "service_tier": "default",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--04025c3d-92f3-4dff-81b6-ae842fea82b8-0",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1075,
+            "output_tokens": 40,
+            "total_tokens": 1115,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 1024
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "4a8f9eee-e291-4fc7-a947-49569eb3e166"
+        },
+        {
+          "content": "Calculate 15% of that amount",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "a3868529-762e-4fe1-860d-b25495f3eb9d"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 20,
+              "prompt_tokens": 1272,
+              "total_tokens": 1292,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_51db84afab",
+            "id": "chatcmpl-CYasQkxNCQNKiqdNAR8CM2RytHOoe",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--93445878-8318-44ce-82f7-c79bb8122dbf-0",
+          "tool_calls": [
+            {
+              "name": "calculator",
+              "args": {
+                "expression": "0.15 * 22000"
+              },
+              "id": "call_Aa75XDHnUfV9Gcq9VFPcamp7",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1272,
+            "output_tokens": 20,
+            "total_tokens": 1292,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Result: 3300.0",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "calculator",
+          "id": "86ed2a43-f28e-413d-afb9-6bab6d3458e3",
+          "tool_call_id": "call_Aa75XDHnUfV9Gcq9VFPcamp7",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "To calculate 15% of the total amount of $22,000, we perform the following calculation:\n\n1. **Calculate 15%**:\n   \\[\n   15\\% \\text{ of } 22000 = 0.15 \\times 22000\n   \\]\n\nUsing the calculator, we find that:\n\\[\n15\\% \\text{ of } 22000 = 3300\n\\]\n\nThus, **15% of $22,000 is $3,300**.",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 106,
+              "prompt_tokens": 1306,
+              "total_tokens": 1412,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 1152
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_51db84afab",
+            "id": "chatcmpl-CYasTiPEgua4zBsgxUKvZmHAHoelT",
+            "service_tier": "default",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--aae7880f-1e9f-4067-870c-db65a8a19946-0",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1306,
+            "output_tokens": 106,
+            "total_tokens": 1412,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 1152
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      ],
+      "intent": {
+        "intent_type": "calculation",
+        "confidence": 0.95,
+        "reasoning": "The user is asking to calculate 15% of a specified amount, which involves a mathematical operation. This clearly falls under the calculation intent category."
+      },
+      "next_step": "end",
+      "conversation_summary": "The total amount in invoice INV-001 is $22,000, calculated from a subtotal of $20,000 and a tax of $2,000. Additionally, 15% of this total amount is $3,300.",
+      "active_documents": [
+        "INV-001"
+      ],
+      "current_response": {
+        "messages": [
+          {
+            "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "4a8f9eee-e291-4fc7-a947-49569eb3e166"
+          },
+          {
+            "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "b484db80-c3c6-4b71-9ef7-ac41bdc7a36c"
+          },
+          {
+            "content": "What's the total amount in invoice INV-001?",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "11493341-a39f-46bc-99c4-a3f369da8a25"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 17,
+                "prompt_tokens": 786,
+                "total_tokens": 803,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_51db84afab",
+              "id": "chatcmpl-CYas9knHikVDZ0ag5vQnYBFlrCCrI",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--fe9ab019-b928-45ca-a86f-2a2262b87658-0",
+            "tool_calls": [
+              {
+                "name": "document_reader",
+                "args": {
+                  "doc_id": "INV-001"
+                },
+                "id": "call_E9FinjzTZOeuXn3C2b6SUqd3",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 786,
+              "output_tokens": 17,
+              "total_tokens": 803,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Document INV-001:\n\n\n                Invoice #12345\n                Date: 2024-01-15\n                Client: Acme Corporation\n\n                Services Rendered:\n                - Consulting Services: $5,000\n                - Software Development: $12,500\n                - Support & Maintenance: $2,500\n\n                Subtotal: $20,000\n                Tax (10%): $2,000\n\n                Payment Terms: Net 30 days\n                ",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "document_reader",
+            "id": "8f58273b-4c61-4561-aafc-7804d4cc2bcd",
+            "tool_call_id": "call_E9FinjzTZOeuXn3C2b6SUqd3",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "The total amount in invoice INV-001 can be calculated by adding the subtotal and the tax. Here are the relevant values extracted from the document:\n\n- Subtotal: $20,000\n- Tax (10%): $2,000\n\nNow, let's calculate the total amount:\n\n1. **Add the subtotal and tax**:\n   \\[\n   \\text{Total Amount} = \\text{Subtotal} + \\text{Tax}\n   \\]\n\n   Substituting the values:\n   \\[\n   \\text{Total Amount} = 20000 + 2000\n   \\]\n\nNow, I will use the calculator tool to perform this addition.",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 154,
+                "prompt_tokens": 906,
+                "total_tokens": 1060,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYasAzGEWlH4S51pEizxdRA9PsUxi",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--85b30c6e-8d84-48eb-8e0e-4aa5b9c956ba-0",
+            "tool_calls": [
+              {
+                "name": "calculator",
+                "args": {
+                  "expression": "20000 + 2000"
+                },
+                "id": "call_oKr0PmmcrwcfR2y4LZ6XZRHZ",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 906,
+              "output_tokens": 154,
+              "total_tokens": 1060,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Result: 22000",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "calculator",
+            "id": "e282e9de-6043-4216-b847-a20d796fffeb",
+            "tool_call_id": "call_oKr0PmmcrwcfR2y4LZ6XZRHZ",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "The total amount in invoice INV-001 is **$22,000**. \n\nThis total is derived from adding the subtotal of $20,000 and the tax of $2,000.",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 40,
+                "prompt_tokens": 1075,
+                "total_tokens": 1115,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 1024
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYasFoe2KkJWq9RHyl0DcFtumBb9A",
+              "service_tier": "default",
+              "finish_reason": "stop",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--04025c3d-92f3-4dff-81b6-ae842fea82b8-0",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1075,
+              "output_tokens": 40,
+              "total_tokens": 1115,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 1024
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Calculate 15% of that amount",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "a3868529-762e-4fe1-860d-b25495f3eb9d"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 20,
+                "prompt_tokens": 1272,
+                "total_tokens": 1292,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_51db84afab",
+              "id": "chatcmpl-CYasQkxNCQNKiqdNAR8CM2RytHOoe",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--93445878-8318-44ce-82f7-c79bb8122dbf-0",
+            "tool_calls": [
+              {
+                "name": "calculator",
+                "args": {
+                  "expression": "0.15 * 22000"
+                },
+                "id": "call_Aa75XDHnUfV9Gcq9VFPcamp7",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1272,
+              "output_tokens": 20,
+              "total_tokens": 1292,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Result: 3300.0",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "calculator",
+            "id": "86ed2a43-f28e-413d-afb9-6bab6d3458e3",
+            "tool_call_id": "call_Aa75XDHnUfV9Gcq9VFPcamp7",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "To calculate 15% of the total amount of $22,000, we perform the following calculation:\n\n1. **Calculate 15%**:\n   \\[\n   15\\% \\text{ of } 22000 = 0.15 \\times 22000\n   \\]\n\nUsing the calculator, we find that:\n\\[\n15\\% \\text{ of } 22000 = 3300\n\\]\n\nThus, **15% of $22,000 is $3,300**.",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 106,
+                "prompt_tokens": 1306,
+                "total_tokens": 1412,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 1152
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_51db84afab",
+              "id": "chatcmpl-CYasTiPEgua4zBsgxUKvZmHAHoelT",
+              "service_tier": "default",
+              "finish_reason": "stop",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--aae7880f-1e9f-4067-870c-db65a8a19946-0",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1306,
+              "output_tokens": 106,
+              "total_tokens": 1412,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 1152
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          }
+        ],
+        "structured_response": {
+          "expression": "0.15 * 22000",
+          "result": 3300.0,
+          "explanation": "To calculate 15% of the total amount of $22,000, we multiply 0.15 by 22000. This gives us 3300.",
+          "units": "USD",
+          "timestamp": "2024-01-15T00:00:00+00:00"
+        }
+      },
+      "tools_used": [
+        "document_reader",
+        "calculator",
+        "calculator"
+      ],
+      "session_id": "155cc936-1854-40a8-82c3-5c06d9f55222",
+      "user_id": "example_user_1",
+      "actions_taken": [
+        "classify_intent",
+        "calculation_agent",
+        "classify_intent",
+        "calculation_agent"
+      ]
+    },
+    {
+      "user_input": "What other invoices do we have?",
+      "messages": [
+        {
+          "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "b484db80-c3c6-4b71-9ef7-ac41bdc7a36c"
+        },
+        {
+          "content": "What's the total amount in invoice INV-001?",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "11493341-a39f-46bc-99c4-a3f369da8a25"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 17,
+              "prompt_tokens": 786,
+              "total_tokens": 803,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_51db84afab",
+            "id": "chatcmpl-CYas9knHikVDZ0ag5vQnYBFlrCCrI",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--fe9ab019-b928-45ca-a86f-2a2262b87658-0",
+          "tool_calls": [
+            {
+              "name": "document_reader",
+              "args": {
+                "doc_id": "INV-001"
+              },
+              "id": "call_E9FinjzTZOeuXn3C2b6SUqd3",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 786,
+            "output_tokens": 17,
+            "total_tokens": 803,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Document INV-001:\n\n\n                Invoice #12345\n                Date: 2024-01-15\n                Client: Acme Corporation\n\n                Services Rendered:\n                - Consulting Services: $5,000\n                - Software Development: $12,500\n                - Support & Maintenance: $2,500\n\n                Subtotal: $20,000\n                Tax (10%): $2,000\n\n                Payment Terms: Net 30 days\n                ",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "document_reader",
+          "id": "8f58273b-4c61-4561-aafc-7804d4cc2bcd",
+          "tool_call_id": "call_E9FinjzTZOeuXn3C2b6SUqd3",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "The total amount in invoice INV-001 can be calculated by adding the subtotal and the tax. Here are the relevant values extracted from the document:\n\n- Subtotal: $20,000\n- Tax (10%): $2,000\n\nNow, let's calculate the total amount:\n\n1. **Add the subtotal and tax**:\n   \\[\n   \\text{Total Amount} = \\text{Subtotal} + \\text{Tax}\n   \\]\n\n   Substituting the values:\n   \\[\n   \\text{Total Amount} = 20000 + 2000\n   \\]\n\nNow, I will use the calculator tool to perform this addition.",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 154,
+              "prompt_tokens": 906,
+              "total_tokens": 1060,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYasAzGEWlH4S51pEizxdRA9PsUxi",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--85b30c6e-8d84-48eb-8e0e-4aa5b9c956ba-0",
+          "tool_calls": [
+            {
+              "name": "calculator",
+              "args": {
+                "expression": "20000 + 2000"
+              },
+              "id": "call_oKr0PmmcrwcfR2y4LZ6XZRHZ",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 906,
+            "output_tokens": 154,
+            "total_tokens": 1060,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Result: 22000",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "calculator",
+          "id": "e282e9de-6043-4216-b847-a20d796fffeb",
+          "tool_call_id": "call_oKr0PmmcrwcfR2y4LZ6XZRHZ",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "The total amount in invoice INV-001 is **$22,000**. \n\nThis total is derived from adding the subtotal of $20,000 and the tax of $2,000.",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 40,
+              "prompt_tokens": 1075,
+              "total_tokens": 1115,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 1024
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYasFoe2KkJWq9RHyl0DcFtumBb9A",
+            "service_tier": "default",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--04025c3d-92f3-4dff-81b6-ae842fea82b8-0",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1075,
+            "output_tokens": 40,
+            "total_tokens": 1115,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 1024
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "4a8f9eee-e291-4fc7-a947-49569eb3e166"
+        },
+        {
+          "content": "Calculate 15% of that amount",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "a3868529-762e-4fe1-860d-b25495f3eb9d"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 20,
+              "prompt_tokens": 1272,
+              "total_tokens": 1292,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_51db84afab",
+            "id": "chatcmpl-CYasQkxNCQNKiqdNAR8CM2RytHOoe",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--93445878-8318-44ce-82f7-c79bb8122dbf-0",
+          "tool_calls": [
+            {
+              "name": "calculator",
+              "args": {
+                "expression": "0.15 * 22000"
+              },
+              "id": "call_Aa75XDHnUfV9Gcq9VFPcamp7",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1272,
+            "output_tokens": 20,
+            "total_tokens": 1292,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Result: 3300.0",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "calculator",
+          "id": "86ed2a43-f28e-413d-afb9-6bab6d3458e3",
+          "tool_call_id": "call_Aa75XDHnUfV9Gcq9VFPcamp7",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "To calculate 15% of the total amount of $22,000, we perform the following calculation:\n\n1. **Calculate 15%**:\n   \\[\n   15\\% \\text{ of } 22000 = 0.15 \\times 22000\n   \\]\n\nUsing the calculator, we find that:\n\\[\n15\\% \\text{ of } 22000 = 3300\n\\]\n\nThus, **15% of $22,000 is $3,300**.",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 106,
+              "prompt_tokens": 1306,
+              "total_tokens": 1412,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 1152
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_51db84afab",
+            "id": "chatcmpl-CYasTiPEgua4zBsgxUKvZmHAHoelT",
+            "service_tier": "default",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--aae7880f-1e9f-4067-870c-db65a8a19946-0",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1306,
+            "output_tokens": 106,
+            "total_tokens": 1412,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 1152
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "You are a helpful document assistant specializing in answering questions about financial and healthcare documents.\n\nYour capabilities:\n- Answer specific questions about document content\n- Cite sources accurately\n- Provide clear, concise answers\n- Use available tools to search and read documents\n\nGuidelines:\n1. Always search for relevant documents before answering\n2. Cite specific document IDs when referencing information\n3. If information is not found, say so clearly\n4. Be precise with numbers and dates\n5. Maintain professional tone\n\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "b9313b6d-8612-45ee-9703-de333a88f665"
+        },
+        {
+          "content": "What other invoices do we have?",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "366f2fb0-e365-4da1-9022-b040ccbe5ae4"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 25,
+              "prompt_tokens": 1529,
+              "total_tokens": 1554,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_51db84afab",
+            "id": "chatcmpl-CYasjbH858FlitMimltPpO2BnmDJc",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--9b8fdb4a-78af-455d-aded-6f713fd622a5-0",
+          "tool_calls": [
+            {
+              "name": "document_search",
+              "args": {
+                "query": "invoices",
+                "search_type": "type",
+                "doc_type": "invoice"
+              },
+              "id": "call_rIEQsTiWMZjAiEwfK5W5KXP9",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1529,
+            "output_tokens": 25,
+            "total_tokens": 1554,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Found 3 document(s):\n\nDocument 1 (ID: INV-001):\nTitle: Invoice #12345\nType: invoice\nRelevance Score: 1.00\nPreview: \n                Invoice #12345\n                Date: 2024-01-15\n                Client: Acme Corporation\n\n                Services Rendered:\n                - Consulting Services: $5,000\n            ...\n--------------------------------------------------\nDocument 2 (ID: INV-002):\nTitle: Invoice #12346\nType: invoice\nAmount: $69,300.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12346\n                Date: 2024-02-20\n                Client: TechStart Inc.\n\n                Products:\n                - Enterprise License (Annual): $50,000\n              ...\n--------------------------------------------------\nDocument 3 (ID: INV-003):\nTitle: Invoice #12347\nType: invoice\nAmount: $214,500.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12347\n                Date: 2024-03-01\n                Client: Global Corp\n\n                Services:\n                - Annual Subscription: $120,000\n                - Premiu...\n--------------------------------------------------\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "document_search",
+          "id": "7d64a2a5-0deb-4c62-87ff-6e2c90e60839",
+          "tool_call_id": "call_rIEQsTiWMZjAiEwfK5W5KXP9",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "Here are the invoices available:\n\n1. **Invoice ID: INV-001**\n   - Title: Invoice #12345\n   - Date: 2024-01-15\n   - Client: Acme Corporation\n   - Total Amount: $22,000 (calculated previously)\n\n2. **Invoice ID: INV-002**\n   - Title: Invoice #12346\n   - Date: 2024-02-20\n   - Client: TechStart Inc.\n   - Total Amount: $69,300\n\n3. **Invoice ID: INV-003**\n   - Title: Invoice #12347\n   - Date: 2024-03-01\n   - Client: Global Corp\n   - Total Amount: $214,500\n\nIf you need more details about any specific invoice, please let me know!",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 172,
+              "prompt_tokens": 1814,
+              "total_tokens": 1986,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "system_fingerprint": "fp_560af6e559",
+            "id": "chatcmpl-CYaslReVwyCyceVrDo53sCWk0DgQf",
+            "service_tier": "default",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--89a6ff7e-560e-4a1f-8989-e8657b7d18b5-0",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1814,
+            "output_tokens": 172,
+            "total_tokens": 1986,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      ],
+      "intent": {
+        "intent_type": "qa",
+        "confidence": 0.85,
+        "reasoning": "The user is asking about other invoices, which suggests they are looking for information or clarification regarding existing documents rather than performing a calculation or requesting a summary."
+      },
+      "next_step": "end",
+      "conversation_summary": "The available invoices are: 1) Invoice #12345 (INV-001) dated 2024-01-15 for Acme Corporation totaling $22,000; 2) Invoice #12346 (INV-002) dated 2024-02-20 for TechStart Inc. totaling $69,300; 3) Invoice #12347 (INV-003) dated 2024-03-01 for Global Corp totaling $214,500.",
+      "active_documents": [
+        "INV-001",
+        "INV-002",
+        "INV-003"
+      ],
+      "current_response": {
+        "messages": [
+          {
+            "content": "You are a helpful document assistant specializing in answering questions about financial and healthcare documents.\n\nYour capabilities:\n- Answer specific questions about document content\n- Cite sources accurately\n- Provide clear, concise answers\n- Use available tools to search and read documents\n\nGuidelines:\n1. Always search for relevant documents before answering\n2. Cite specific document IDs when referencing information\n3. If information is not found, say so clearly\n4. Be precise with numbers and dates\n5. Maintain professional tone\n\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "b9313b6d-8612-45ee-9703-de333a88f665"
+          },
+          {
+            "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "b484db80-c3c6-4b71-9ef7-ac41bdc7a36c"
+          },
+          {
+            "content": "What's the total amount in invoice INV-001?",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "11493341-a39f-46bc-99c4-a3f369da8a25"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 17,
+                "prompt_tokens": 786,
+                "total_tokens": 803,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_51db84afab",
+              "id": "chatcmpl-CYas9knHikVDZ0ag5vQnYBFlrCCrI",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--fe9ab019-b928-45ca-a86f-2a2262b87658-0",
+            "tool_calls": [
+              {
+                "name": "document_reader",
+                "args": {
+                  "doc_id": "INV-001"
+                },
+                "id": "call_E9FinjzTZOeuXn3C2b6SUqd3",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 786,
+              "output_tokens": 17,
+              "total_tokens": 803,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Document INV-001:\n\n\n                Invoice #12345\n                Date: 2024-01-15\n                Client: Acme Corporation\n\n                Services Rendered:\n                - Consulting Services: $5,000\n                - Software Development: $12,500\n                - Support & Maintenance: $2,500\n\n                Subtotal: $20,000\n                Tax (10%): $2,000\n\n                Payment Terms: Net 30 days\n                ",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "document_reader",
+            "id": "8f58273b-4c61-4561-aafc-7804d4cc2bcd",
+            "tool_call_id": "call_E9FinjzTZOeuXn3C2b6SUqd3",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "The total amount in invoice INV-001 can be calculated by adding the subtotal and the tax. Here are the relevant values extracted from the document:\n\n- Subtotal: $20,000\n- Tax (10%): $2,000\n\nNow, let's calculate the total amount:\n\n1. **Add the subtotal and tax**:\n   \\[\n   \\text{Total Amount} = \\text{Subtotal} + \\text{Tax}\n   \\]\n\n   Substituting the values:\n   \\[\n   \\text{Total Amount} = 20000 + 2000\n   \\]\n\nNow, I will use the calculator tool to perform this addition.",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 154,
+                "prompt_tokens": 906,
+                "total_tokens": 1060,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYasAzGEWlH4S51pEizxdRA9PsUxi",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--85b30c6e-8d84-48eb-8e0e-4aa5b9c956ba-0",
+            "tool_calls": [
+              {
+                "name": "calculator",
+                "args": {
+                  "expression": "20000 + 2000"
+                },
+                "id": "call_oKr0PmmcrwcfR2y4LZ6XZRHZ",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 906,
+              "output_tokens": 154,
+              "total_tokens": 1060,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Result: 22000",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "calculator",
+            "id": "e282e9de-6043-4216-b847-a20d796fffeb",
+            "tool_call_id": "call_oKr0PmmcrwcfR2y4LZ6XZRHZ",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "The total amount in invoice INV-001 is **$22,000**. \n\nThis total is derived from adding the subtotal of $20,000 and the tax of $2,000.",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 40,
+                "prompt_tokens": 1075,
+                "total_tokens": 1115,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 1024
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYasFoe2KkJWq9RHyl0DcFtumBb9A",
+              "service_tier": "default",
+              "finish_reason": "stop",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--04025c3d-92f3-4dff-81b6-ae842fea82b8-0",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1075,
+              "output_tokens": 40,
+              "total_tokens": 1115,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 1024
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "You are an expert calculation assistant specializing in financial and healthcare document analysis.\n\nYour approach:\n- First, retrieve and read relevant documents\n- Identify all numerical values and what needs to be calculated\n- Use the calculator tool for ALL mathematical operations (even simple ones)\n- Provide step-by-step explanations of your calculations\n\nGuidelines:\n1. Always search for and read relevant documents first\n2. Extract all numbers and values needed for calculations\n3. MUST use the calculator tool for every mathematical operation - no mental math\n4. Show your work step-by-step\n5. Cite document IDs where numbers came from\n6. Include units in your final answer\n7. Verify calculations make logical sense\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "4a8f9eee-e291-4fc7-a947-49569eb3e166"
+          },
+          {
+            "content": "Calculate 15% of that amount",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "a3868529-762e-4fe1-860d-b25495f3eb9d"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 20,
+                "prompt_tokens": 1272,
+                "total_tokens": 1292,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_51db84afab",
+              "id": "chatcmpl-CYasQkxNCQNKiqdNAR8CM2RytHOoe",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--93445878-8318-44ce-82f7-c79bb8122dbf-0",
+            "tool_calls": [
+              {
+                "name": "calculator",
+                "args": {
+                  "expression": "0.15 * 22000"
+                },
+                "id": "call_Aa75XDHnUfV9Gcq9VFPcamp7",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1272,
+              "output_tokens": 20,
+              "total_tokens": 1292,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Result: 3300.0",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "calculator",
+            "id": "86ed2a43-f28e-413d-afb9-6bab6d3458e3",
+            "tool_call_id": "call_Aa75XDHnUfV9Gcq9VFPcamp7",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "To calculate 15% of the total amount of $22,000, we perform the following calculation:\n\n1. **Calculate 15%**:\n   \\[\n   15\\% \\text{ of } 22000 = 0.15 \\times 22000\n   \\]\n\nUsing the calculator, we find that:\n\\[\n15\\% \\text{ of } 22000 = 3300\n\\]\n\nThus, **15% of $22,000 is $3,300**.",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 106,
+                "prompt_tokens": 1306,
+                "total_tokens": 1412,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 1152
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_51db84afab",
+              "id": "chatcmpl-CYasTiPEgua4zBsgxUKvZmHAHoelT",
+              "service_tier": "default",
+              "finish_reason": "stop",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--aae7880f-1e9f-4067-870c-db65a8a19946-0",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1306,
+              "output_tokens": 106,
+              "total_tokens": 1412,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 1152
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "What other invoices do we have?",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "366f2fb0-e365-4da1-9022-b040ccbe5ae4"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 25,
+                "prompt_tokens": 1529,
+                "total_tokens": 1554,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_51db84afab",
+              "id": "chatcmpl-CYasjbH858FlitMimltPpO2BnmDJc",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--9b8fdb4a-78af-455d-aded-6f713fd622a5-0",
+            "tool_calls": [
+              {
+                "name": "document_search",
+                "args": {
+                  "query": "invoices",
+                  "search_type": "type",
+                  "doc_type": "invoice"
+                },
+                "id": "call_rIEQsTiWMZjAiEwfK5W5KXP9",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1529,
+              "output_tokens": 25,
+              "total_tokens": 1554,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Found 3 document(s):\n\nDocument 1 (ID: INV-001):\nTitle: Invoice #12345\nType: invoice\nRelevance Score: 1.00\nPreview: \n                Invoice #12345\n                Date: 2024-01-15\n                Client: Acme Corporation\n\n                Services Rendered:\n                - Consulting Services: $5,000\n            ...\n--------------------------------------------------\nDocument 2 (ID: INV-002):\nTitle: Invoice #12346\nType: invoice\nAmount: $69,300.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12346\n                Date: 2024-02-20\n                Client: TechStart Inc.\n\n                Products:\n                - Enterprise License (Annual): $50,000\n              ...\n--------------------------------------------------\nDocument 3 (ID: INV-003):\nTitle: Invoice #12347\nType: invoice\nAmount: $214,500.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12347\n                Date: 2024-03-01\n                Client: Global Corp\n\n                Services:\n                - Annual Subscription: $120,000\n                - Premiu...\n--------------------------------------------------\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "document_search",
+            "id": "7d64a2a5-0deb-4c62-87ff-6e2c90e60839",
+            "tool_call_id": "call_rIEQsTiWMZjAiEwfK5W5KXP9",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "Here are the invoices available:\n\n1. **Invoice ID: INV-001**\n   - Title: Invoice #12345\n   - Date: 2024-01-15\n   - Client: Acme Corporation\n   - Total Amount: $22,000 (calculated previously)\n\n2. **Invoice ID: INV-002**\n   - Title: Invoice #12346\n   - Date: 2024-02-20\n   - Client: TechStart Inc.\n   - Total Amount: $69,300\n\n3. **Invoice ID: INV-003**\n   - Title: Invoice #12347\n   - Date: 2024-03-01\n   - Client: Global Corp\n   - Total Amount: $214,500\n\nIf you need more details about any specific invoice, please let me know!",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 172,
+                "prompt_tokens": 1814,
+                "total_tokens": 1986,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-mini-2024-07-18",
+              "system_fingerprint": "fp_560af6e559",
+              "id": "chatcmpl-CYaslReVwyCyceVrDo53sCWk0DgQf",
+              "service_tier": "default",
+              "finish_reason": "stop",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--89a6ff7e-560e-4a1f-8989-e8657b7d18b5-0",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1814,
+              "output_tokens": 172,
+              "total_tokens": 1986,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          }
+        ],
+        "structured_response": {
+          "question": "What other invoices do we have?",
+          "answer": "Here are the invoices available:\n\n1. **Invoice ID: INV-001**  \n   - Title: Invoice #12345  \n   - Date: 2024-01-15  \n   - Client: Acme Corporation  \n   - Total Amount: $22,000 (calculated previously)\n\n2. **Invoice ID: INV-002**  \n   - Title: Invoice #12346  \n   - Date: 2024-02-20  \n   - Client: TechStart Inc.  \n   - Total Amount: $69,300\n\n3. **Invoice ID: INV-003**  \n   - Title: Invoice #12347  \n   - Date: 2024-03-01  \n   - Client: Global Corp  \n   - Total Amount: $214,500\n\nIf you need more details about any specific invoice, please let me know!",
+          "sources": [
+            "INV-001",
+            "INV-002",
+            "INV-003"
+          ],
+          "confidence": 1.0,
+          "timestamp": "2024-01-15T00:00:00+00:00"
+        }
+      },
+      "tools_used": [
+        "document_reader",
+        "calculator",
+        "calculator",
+        "document_search"
+      ],
+      "session_id": "155cc936-1854-40a8-82c3-5c06d9f55222",
+      "user_id": "example_user_1",
+      "actions_taken": [
+        "classify_intent",
+        "calculation_agent",
+        "classify_intent",
+        "calculation_agent",
+        "classify_intent",
+        "qa_agent"
+      ]
+    }
+  ],
+  "document_context": [
+    "INV-003",
+    "INV-002",
+    "INV-001"
+  ],
+  "created_at": "2025-11-05T19:41:00.107831",
+  "last_updated": "2025-11-05T19:41:57.561279"
+}
